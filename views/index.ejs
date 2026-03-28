@@ -24,6 +24,42 @@
 	</p>
 	<br>
 	<p>你可以直接在 index.ejs 里写页面，不用构建、不用打包！</p>
+
+
+
+<div>
+	<h2>所有产品系列（共 <%= collections.length %> 个）</h2>
+	<table border="1" cellpadding="8" cellspacing="0">
+		<tr>
+			<th>ID</th>
+			<th>标题</th>
+			<th>状态</th>
+			<th>商品数量</th>
+		</tr>
+		<% collections.forEach(item=> { %>
+			<tr>
+				<td>
+					<%= item.id %>
+				</td>
+				<td>
+					<%= item.title %>
+				</td>
+				<td>
+					<%= item.published ? '已发布' : '未发布' %>
+				</td>
+				<td>
+					<%= item.products_count || 0 %>
+				</td>
+			</tr>
+			<% }) %>
+	</table>
+</div>
+
+
 </body>
+
+
+
+
 
 </html>

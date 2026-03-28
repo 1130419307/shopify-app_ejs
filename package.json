@@ -1,0 +1,15 @@
+{
+  "name": "shopify-ejs-app",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "@shopify/shopify-api": "^11.4.1",
+    "ejs": "^3.1.10",
+    "express": "^4.18.2"
+  }
+}
